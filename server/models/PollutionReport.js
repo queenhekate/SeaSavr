@@ -17,7 +17,15 @@ const PollutionReportSchema = new mongoose.Schema({
     default: 'Low',
   },
     reporterName: String,
-  photoUrl: String,
+    photoUrl: {
+        type: String,
+        validate: {
+          validator: function (v) {
+            return /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg))$/i.test(v);
+          },
+          message: props => `${props.value} is not a valid URL!`,
+        },
+      },
   dateReported: {
     type: Date,
     default: Date.now,
