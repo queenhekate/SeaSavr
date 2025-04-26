@@ -1,15 +1,22 @@
 import mongoose from 'mongoose';
 
 const PollutionReportSchema = new mongoose.Schema({
-  location: {
-    type: { type: String, enum: ['Point'], default: 'Point' },
-    coordinates: { type: [Number], required: true }, // [longitude, latitude]
-  },
+    location: {
+        name: String,
+        lat: Number,
+        lng: Number,
+      },
   pollutionType: {
     type: String,
     required: true,
   },
   description: String,
+  severity: {
+    type: String,
+    enum: ['Low', 'Medium', 'High'],
+    default: 'Low',
+  },
+    reporterName: String,
   photoUrl: String,
   dateReported: {
     type: Date,

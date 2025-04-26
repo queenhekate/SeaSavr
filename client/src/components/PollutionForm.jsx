@@ -7,6 +7,8 @@ const PollutionForm = () => {
     description: '',
     latitude: '',
     longitude: '',
+    locationName: '',
+    severity: '',
     photoUrl: '', // You can extend this later for file upload
   });
 
@@ -24,7 +26,9 @@ const PollutionForm = () => {
       pollutionType: formData.pollutionType,
       description: formData.description,
       photoUrl: formData.photoUrl,
+      severity: formData.severity,
       location: {
+        name: formData.locationName,
         type: 'Point',
         coordinates: [
           parseFloat(formData.longitude),
@@ -73,6 +77,15 @@ const PollutionForm = () => {
         />
 
         <input
+        type="text"
+        name="locationName"
+        placeholder="Location Name"
+        value={formData.locationName}
+        onChange={handleChange}
+        className="w-full p-2 border rounded"
+        />
+
+        <input
           type="text"
           name="latitude"
           placeholder="Latitude"
@@ -100,6 +113,19 @@ const PollutionForm = () => {
           onChange={handleChange}
           className="w-full p-2 border rounded"
         />
+
+        <select
+        name="severity"
+        value={formData.severity}
+        onChange={handleChange}
+        className="w-full p-2 border rounded"
+        required
+        >
+        <option value="">Select Severity</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        </select>
 
         <button
           type="submit"

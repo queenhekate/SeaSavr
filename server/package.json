@@ -4,7 +4,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
-    "expres": "^0.0.5",
+    "express": "^0.0.5",
     "mongoose": "^8.14.0"
   }
 }
