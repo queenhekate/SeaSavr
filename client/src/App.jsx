@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PollutionForm from './components/PollutionForm';
+import PollutionForm from './components/PollutionForm/PollutionForm';
 import PollutionMap from './components/PollutionMap';
 import Main from './components/Main/Main';
 

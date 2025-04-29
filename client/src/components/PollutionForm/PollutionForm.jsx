@@ -54,9 +54,9 @@ const PollutionForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-white rounded-xl shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Report Pollution</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="pollutionForm__container">
+      <h2 className="pollutionForm__title">Report Pollution</h2>
+      <form onSubmit={handleSubmit} className="pollutionForm__form">
         
         <input
           type="text"
@@ -64,7 +64,7 @@ const PollutionForm = () => {
           placeholder="Type of Pollution (e.g., Oil Spill)"
           value={formData.pollutionType}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="pollutionForm__input"
           required
         />
 
@@ -73,7 +73,7 @@ const PollutionForm = () => {
           placeholder="Description"
           value={formData.description}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="pollutionForm__textarea"
         />
 
         <input
@@ -82,7 +82,7 @@ const PollutionForm = () => {
         placeholder="Location Name"
         value={formData.locationName}
         onChange={handleChange}
-        className="w-full p-2 border rounded"
+        className="pollutionForm__input"
         />
 
         <input
@@ -91,7 +91,7 @@ const PollutionForm = () => {
           placeholder="Latitude"
           value={formData.latitude}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="pollutionForm__input"
           required
         />
 
@@ -101,7 +101,7 @@ const PollutionForm = () => {
           placeholder="Longitude"
           value={formData.longitude}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="pollutionForm__input"
           required
         />
 
@@ -111,14 +111,14 @@ const PollutionForm = () => {
           placeholder="Photo URL (optional)"
           value={formData.photoUrl}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="pollutionForm__input"
         />
 
         <select
         name="severity"
         value={formData.severity}
         onChange={handleChange}
-        className="w-full p-2 border rounded"
+        className="pollutionForm__select"
         required
         >
         <option value="">Select Severity</option>
@@ -129,7 +129,7 @@ const PollutionForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          className="pollutionForm__button"
         >
           Submit Report
         </button>

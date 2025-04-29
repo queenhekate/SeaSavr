@@ -1,0 +1,77 @@
+.main-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    no-repeat center center/cover;
+  color: white;
+  font-family: "Arial", sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-header {
+  margin-bottom: 2.5rem;
+}
+
+.main-title {
+  font-size: 3rem; /* Equivalent to text-5xl */
+  font-weight: bold;
+  color: #1e3a8a; /* Dark blue */
+  margin-bottom: 1rem;
+  animation: bounce 1.5s infinite;
+}
+
+.main-description {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  color: #2c5282; /* Medium blue */
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.main-link {
+  background-color: #2563eb; /* Blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-link:hover {
+  background-color: #1d4ed8; /* Darker blue */
+}
+
+.main-link-alt {
+  background-color: #14b8a6; /* Teal */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-link-alt:hover {
+  background-color: #0f766e; /* Darker teal */
+}
+
+.main-footer {
+  margin-top: 4rem;
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  color: white;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
